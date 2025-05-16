@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode, JSX } from "react"; // ✅ Step 1
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -19,8 +21,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
-}>) {
+  children: ReactNode;
+}>): JSX.Element { // ✅ Step 2
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
