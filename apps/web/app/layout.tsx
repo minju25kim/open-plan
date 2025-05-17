@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode, JSX } from "react"; // ✅ Step 1
+import type { ReactNode, JSX } from "react"; 
 
 import localFont from "next/font/local";
 import "./globals.css";
@@ -22,7 +22,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
-}>): JSX.Element { // ✅ Step 2
+}>): JSX.Element {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
