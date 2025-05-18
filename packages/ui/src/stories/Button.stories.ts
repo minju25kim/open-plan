@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { Button } from '../button';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Test/Button',
+  title: 'Open Plan/Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
   tags: ['autodocs'],
@@ -16,9 +15,24 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    children: 'Button',
+    children: '다음',
+    onClick: fn(),
   },
+};
+
+export const HoverPressed: Story = {
+  args: {
+    children: '다음',
+    className: 'hover:bg-[rgba(17,17,17,0.8)] bg-[rgba(17,17,17,0.8)]',
+    onClick: fn(),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '호버/프레스 상태를 시각적으로 확인할 수 있도록 강제로 적용한 버튼입니다.'
+      }
+    }
+  }
 };
