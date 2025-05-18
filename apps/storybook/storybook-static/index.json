@@ -1,0 +1,1 @@
+{"v":5,"entries":{"test-button--primary":{"type":"story","id":"test-button--primary","name":"Primary","title":"Test/Button","importPath":"../../packages/ui/src/stories/Button.stories.ts","componentPath":"../../packages/ui/src/button.tsx","tags":["dev","test","autodocs"]}}}
